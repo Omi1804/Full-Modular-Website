@@ -1,0 +1,22 @@
+{{!-- these are partials which are files like jo hmko kai pages k liye use krna hai aur wo common bhi ho sbme jese navbar jo ki har page k liye common hoga to uske liye instead of adding navbar to all the pages we use partials then we call the partials to all the pages required and if we want any change then we just have to change the partial file --}}
+
+<nav class="navbar navbar-expand-lg border-bottom bg-body-tertiary navbar-dark navbar bg-dark hello" data-bs-theme="dark">
+  <div class="container-fluid">
+    <img src="{{data.brandIconUrl}}" alt="Bootstrap" width="40" height="40">
+    <a class="navbar-brand" href="#">{{data.brandName}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        {{#each data.links}}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+        </li>
+      {{/each}}
+      
+      </ul>
+    </div>
+  </div>
+</nav>

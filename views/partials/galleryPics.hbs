@@ -1,0 +1,13 @@
+ <section id="services_section">
+        <div class="container">
+            <div class="row mt-3 py-2">
+            {{#each data}}
+                <div class="col-md-4 py-2 ">
+                    <div class="card ">
+                        <img src="{{this.imageUrl}}" alt="" class="img-thumbnail rounded float-start">
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,25 @@
+    <section id="services_section" class="py-4">
+        <div class="container">
+            <h1 class="text-center text-secondary">Our Services</h1>
+
+            <div class="row mt-3 py-2">
+                {{!-- first service col --}}
+                {{#each data}}
+                <div class="col-md-4 py-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container text-center service_icon">
+                            <i class="{{this.icon}}"></i>
+                            </div>
+                            <h4 class="card-title">{{this.title}}</h4>
+                            <p>{{this.description}}</p>
+                           <button type="button" class="btn btn-primary btn-sm">{{this.link}}</button>
+                           <button type="button" class="btn btn-primary btn-sm">Support</button>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+    </section>
